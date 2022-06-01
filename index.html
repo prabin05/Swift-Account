@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swift Account</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="./index.html">
+                        <span class="icon">
+                            <ion-icon name="logo-ionic"></ion-icon>
+                        </span>
+                        <span class="title">Swift Account</span>
+                    </a>
+                </li>
+                <li class="activenow">
+                    <a href="./index.html">
+                        <span class="icon">
+                            <ion-icon name="desktop-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./Pages/income.html">
+                        <span class="icon">
+                            <ion-icon name="cash-outline"></ion-icon>
+                        </span>
+                        <span class="title">Income</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./Pages/Expenses.html">
+                        <span class="icon">
+                            <ion-icon name="wallet-outline"></ion-icon>
+                        </span>
+                        <span class="title">Expenses</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./Pages/Profitloss.html">
+                        <span class="icon">
+                            <ion-icon name="trending-up-outline"></ion-icon>
+                        </span>
+                        <span class="title">Profit / Loss</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./Pages/Credit.html">
+                        <span class="icon">
+                            <ion-icon name="card-outline"></ion-icon>
+                        </span>
+                        <span class="title">Credit</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./Pages/Loan.html">
+                        <span class="icon">
+                            <ion-icon name="storefront-outline"></ion-icon>
+                        </span>
+                        <span class="title">Loan</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./Pages/Opening-balance.html">
+                        <span class="icon">
+                            <ion-icon name="receipt-outline"></ion-icon>
+                        </span>
+                        <span class="title">Opening Balance</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./Pages/Closing-balance.html">
+                        <span class="icon">
+                            <ion-icon name="albums-outline"></ion-icon>
+                        </span>
+                        <span class="title">Closing Balance</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="top-left">
+                    <div class="toggle">
+                        <ion-icon name="menu-outline"></ion-icon>
+                    </div>
+                    <div class="title-top">
+                        <h2>Dashboard</h2>
+                    </div>
+                </div>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+                <div class="action">
+                    <div class="profile" onclick="menuToggle();">
+                        <img src="../assets/imgs/customer01.png" alt="">
+                        
+                    </div>
+                    <div class="menu">
+                        <h3>
+                            Yubraj Rajbanshi
+                            <div>
+                                <p>Java Developer</p>
+                                <div id="timer"></div>
+                                <script type="text/javascript">
+                                    function updateTimer() {
+                                        future = Date.parse("jun 12, 2023 01:30:00");
+                                        now = new Date();
+                                        diff = future - now;
+
+                                        days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                                        hours = Math.floor(diff / (1000 * 60 * 60));
+                                        mins = Math.floor(diff / (1000 * 60));
+                                        secs = Math.floor(diff / 1000);
+
+                                        d = days;
+                                        h = hours - days * 24;
+                                        m = mins - hours * 60;
+                                        s = secs - mins * 60;
+
+                                        document.getElementById("timer")
+                                            .innerHTML =
+                                            '<div>' + d + '<span> Days | </span></div>' + 
+                                            '<div>' + h + '<span> :</span></div>' + 
+                                            '<div>' + m + '<span> :</span></div>' +
+                                            '<div>' + s + '<span> s</span></div>';
+                                    }
+                                    setInterval('updateTimer()', 1000);
+                                </script>
+                                <p>Platinum Membership</p>
+                            </div>
+                        </h3>
+                        <ul>
+                            <li>
+                                <ion-icon name="person-circle-outline" size="large"></ion-icon>
+                                <a href="#">My Profile</a>
+                            </li>
+                            <li>
+                                <ion-icon name="create-outline" size="large"></ion-icon>
+                                <a href="#">Edit Account</a>
+                            </li>
+                            <li  >
+                                <ion-icon name="add-circle-outline" size="large"></ion-icon>
+                                <a href="./Pages/add-user.html">Add User</a>
+                            </li>
+                            <li>
+                                <ion-icon name="cog-outline" size="large"></ion-icon>
+                                <a href="./Pages/Settings.html">Settings</a>
+                            </li>
+                            <li>
+                                <ion-icon name="call-outline" size="large"></ion-icon>
+                                <a href="./Pages/Contact-us.html">Contact Us</a>
+                            </li>
+                            <li>
+                                <ion-icon name="information-circle-outline" size="large"></ion-icon>
+                                <a href="./Pages/About-us.html">About Us</a>
+                            </li>
+                            <li onclick="checker()">
+                                <ion-icon name="log-out-outline" size="large"></ion-icon>
+                                <a href="./Pages/Signed-out.html">Sign Out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    
+            </div>
+
+            <!-- ======================= Cards ================== -->
+            <div class="cardBox">
+                <div class="card">
+                    <a href="./Pages/income.html">
+                        <div class="numbers">$10,000</div>
+                        <div class="cardName">
+                            <div class="cardtitle">Income</div>
+                            <div class="cardnum">10%</div>
+                            <div class="cardicon">
+                                <ion-icon name="arrow-up-circle-outline"></ion-icon>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="iconBx">
+                        <ion-icon name="cash-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="./Pages/Expenses.html">
+                        <div class="numbers">$8,000</div>
+                        <div class="cardName">
+                            <div class="cardtitle">Expenses</div>
+                            <div class="cardnum">2%</div>
+                            <div class="cardicon">
+                                <ion-icon name="arrow-up-circle-outline"></ion-icon>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="iconBx">
+                        <ion-icon name="wallet-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <a href="./Pages/Opening-balance.html">
+                        <div class="numbers">$1,05,000</div>
+                        <div class="cardName">
+                            <div class="cardtitle">Opening Balance</div>
+                            <div class="cardnum">7%</div>
+                            <div class="cardicon">
+                                <ion-icon name="arrow-up-circle-outline"></ion-icon>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="iconBx">
+                        <ion-icon name="receipt-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <a href="./Pages/Closing-balance.html">
+                        <div class="numbers">$7,842</div>
+                        <div class="cardName">
+                            <div class="cardtitle">Closing Balance</div>
+                            <div class="cardnum">5.7%</div>
+                            <div class="cardicon">
+                                <ion-icon name="arrow-up-circle-outline"></ion-icon>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="iconBx">
+                        <ion-icon name="albums-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================ Order Details List ================= -->
+            <div class="details">
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>Recent Orders</h2>
+                        <a href="#" class="btn">View All</a>
+                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Name</td>
+                                <td>Price</td>
+                                <td>Payment</td>
+                                <td>Status</td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Star Refrigerator</td>
+                                <td>$1200</td>
+                                <td>Paid</td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Dell Laptop</td>
+                                <td>$110</td>
+                                <td>Due</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Apple Watch</td>
+                                <td>$1200</td>
+                                <td>Paid</td>
+                                <td><span class="status return">Return</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Addidas Shoes</td>
+                                <td>$620</td>
+                                <td>Due</td>
+                                <td><span class="status inProgress">In Progress</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Star Refrigerator</td>
+                                <td>$1200</td>
+                                <td>Paid</td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Dell Laptop</td>
+                                <td>$110</td>
+                                <td>Due</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Apple Watch</td>
+                                <td>$1200</td>
+                                <td>Paid</td>
+                                <td><span class="status return">Return</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Addidas Shoes</td>
+                                <td>$620</td>
+                                <td>Due</td>
+                                <td><span class="status inProgress">In Progress</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- ================= New Customers ================ -->
+                <div class="recentCustomers">
+                    <div class="cardHeader">
+                        <h2>Recent Customers</h2>
+                    </div>
+
+                    <table>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="assets/imgs/customer01.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Yubraj <br> <span>Kupondol</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="assets/imgs/customer02.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Sandeep<br> <span>Chardobato</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="assets/imgs/customer03.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Rahul<br> <span>Bansbari</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="assets/imgs/customer04.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Bibek <br> <span>Bhaktapur</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="assets/imgs/customer05.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Milan <br> <span>Chakrapath</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="assets/imgs/customer06.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Anish <br> <span>Balaju </span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="assets/imgs/customer07.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Abhishek <br> <span>satungal</span></h4>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/timer.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

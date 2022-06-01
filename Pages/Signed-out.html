@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swift Account</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="../assets/css/Sign-in.css">
+    <link rel="stylesheet" href="../assets/css/sign-up.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="main">
+            <div class="topbar">
+                <div class="action">
+                    <div class="profile" onclick="menuToggle();">
+                        <img src="../assets/imgs/customer01.png" alt="">
+                        
+                    </div>
+                    <div class="menu">
+                        <h3>
+                            <p>Please Sign In first</p>
+                            <p>or <a href="./Contact-us.html">Contact us</a> to Activate Account </p>
+                        </h3>
+                        <ul>
+                            <li>
+                                <ion-icon name="add-circle-outline" size="large"></ion-icon>
+                                <a href="../Pages/Sign-up.html">Sign Up</a>
+                            </li>
+                            <li>
+                                <ion-icon name="cog-outline" size="large"></ion-icon>
+                                <a href="../Pages/Settings.html">Settings</a>
+                            </li>
+                            <li>
+                                <ion-icon name="call-outline" size="large"></ion-icon>
+                                <a href="../Pages/Contact-us.html">Contact Us</a>
+                            </li>
+                            <li>
+                                <ion-icon name="information-circle-outline" size="large"></ion-icon>
+                                <a href="../Pages/About-us.html">About Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <script>
+                    function menuToggle(){
+                        const toggleMenu = document.querySelector('.menu');
+                        toggleMenu.classList.toggle('active')
+                    }
+                </script>
+            </div>
+
+            <div class="sign-up">
+                <div class="header">
+                    <h2>Login</h2>
+                </div>
+                <form id="form" class="form">
+                    <div class="form-control">
+                        <label for="username">Username</label>
+                        <input type="text" placeholder="florinpop17" id="username" />
+                        <ion-icon class="checkmark" name="checkmark-circle-outline" size="large"></ion-icon>
+                        <ion-icon class="alert-circle"name="alert-circle-outline" size="large"></ion-icon>
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-control">
+                        <label for="username">Password</label>
+                        <input type="password" placeholder="Password" id="password"/>
+                        <ion-icon class="checkmark" name="checkmark-circle-outline" size="large"></ion-icon>
+                        <ion-icon class="alert-circle"name="alert-circle-outline" size="large"></ion-icon>
+                        <small>Error message</small>
+                    </div>
+                    <div class="buttons">
+                        <button>Sign Up</button>
+                        <button>Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="../assets/js/Sign-in.js"></script>
+    <script src="../assets/js/sign-up.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
